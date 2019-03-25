@@ -89,7 +89,7 @@ def SingleCEQ(url):
     #Relevence.append([all_Course_info[108].text_content(), all_Course_info[109].text_content()])
 
     #print("Relevence =", Relevence)
-    filename =("Results/"+Course_info[1][1]+"_"+Course_info[3][1]+"_"+Course_info[4][1]+"_"+Course_info[5][1]+".csv")
+    filename =("Results/Regler/"+Course_info[1][1]+"_"+Course_info[3][1]+"_"+Course_info[4][1]+"_"+Course_info[5][1]+".csv")
 
     with open(filename, 'w') as csvFile:
         writer = csv.writer(csvFile)
