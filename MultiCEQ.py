@@ -2,12 +2,12 @@ import SingleCEQ as CEQ
 import os
 
 try:
-    os.makedirs("Results/Regler")
+    os.makedirs("Results/Regler/Incomplete")
 except FileExistsError:
     # directory already exists
     pass
 
-filepath = 'URLs/Regler.txt'
+filepath = 'generated_urls.txt'
 with open(filepath) as fp:
     each_url = fp.readline().rstrip('\n')
     CEQ.SingleCEQ(each_url)

@@ -40,7 +40,18 @@ def SingleCEQ(url):
     #Course info starts from 2. Used to make a dictionary
     for i in range(25,35,2):
         #print(i,"= ",all_Course_info[i].text_content())
-        Course_time.append([all_Course_info[i].text_content(), all_Course_info[i+1].text_content()])
+        try: # Exit if not enough students exist
+            Course_time.append([all_Course_info[i].text_content(), all_Course_info[i+1].text_content()])
+        except IndexError:
+            filename =("Results/Regler/Incomplete/"+Course_info[1][1]+"_"+Course_info[3][1]+"_"+Course_info[4][1]+"_"+Course_info[5][1]+".csv")
+
+            with open(filename, 'w') as csvFile:
+                writer = csv.writer(csvFile)
+                writer.writerows(Course_info)
+                #writer.writerows(Relevence)
+
+            csvFile.close()
+            return
         i+=2
 
     #print("Course time = ", Course_time)
@@ -49,7 +60,18 @@ def SingleCEQ(url):
     #Course info starts from 2. Used to make a dictionary
     for i in range(36,47,3):
         #print(i,"= ",all_Course_info[i].text_content())
-        Attendance.append([all_Course_info[i].text_content(), all_Course_info[i+1].text_content(), all_Course_info[i+2].text_content()])
+        try:
+            Attendance.append([all_Course_info[i].text_content(), all_Course_info[i+1].text_content(), all_Course_info[i+2].text_content()])
+        except IndexError:
+            filename =("Results/Regler/Incomplete/"+Course_info[1][1]+"_"+Course_info[3][1]+"_"+Course_info[4][1]+"_"+Course_info[5][1]+".csv")
+
+            with open(filename, 'w') as csvFile:
+                writer = csv.writer(csvFile)
+                writer.writerows(Course_info)
+                writer.writerows(Course_time)
+                #writer.writerows(Relevence)
+            csvFile.close()
+            return
         i+=2
 
     #print("Attendance =", Attendance)
