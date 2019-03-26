@@ -43,7 +43,8 @@ Courses.append(["FRTN05", "VT", "14", "11", "LP1", "all"])
 
 Courses.append(["FRTN10", "HT", "17", "10", "LP1", "all"])
 
-Courses.append(["FRTN15", "HT", "18", "09", "LP2", "all"])
+Courses.append(["FRTN15", "VT", "18", "15", "LP2", "all"])
+Courses.append(["FRTN15", "HT", "13", "09", "LP2", "all"])
 
 Courses.append(["FRTN20", "VT", "16", "10", "LP2", "all"])
 
@@ -76,6 +77,6 @@ for course in Courses:
         i+=1
 
 
-with open('generated_urls.txt', 'w') as f:
+with open('regler_urls.txt', 'w') as f:
     for item in url:
         f.write("%s\n" % item)

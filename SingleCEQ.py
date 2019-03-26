@@ -4,9 +4,9 @@ import csv # To write CSVs
 import lxml.html as lh
 #import pandas as pd
 
-def SingleCEQ(url):
+def SingleCEQ(url, result_folder):
     #Create a handle, page, to handle the contents of the website
-    print("url =", url)
+    #print("url =", url)
     page = requests.get(url)
     #Store the contents of the website under doc
     doc = lh.fromstring(page.content)
@@ -111,8 +111,8 @@ def SingleCEQ(url):
     #Relevence.append([all_Course_info[108].text_content(), all_Course_info[109].text_content()])
 
     #print("Relevence =", Relevence)
-    filename =("Results/Regler/"+Course_info[1][1]+"_"+Course_info[3][1]+"_"+Course_info[4][1]+"_"+Course_info[5][1]+".csv")
-
+    filename =(result_folder+Course_info[1][1]+"_"+Course_info[3][1]+"_"+Course_info[4][1]+"_"+Course_info[5][1]+".csv")
+    print("filename = ", filename)
     with open(filename, 'w') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerows(Course_info)

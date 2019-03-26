@@ -1,4 +1,5 @@
 #!/bin/bash
 
-python3 GenerateURL.py
+python3 GenerateReglerURL.py
+python3 GenerateBMEURL.py
 python3 MultiCEQ.py
