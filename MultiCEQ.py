@@ -38,3 +38,13 @@ with open(bme) as fp:
         if(each_url==''):
             continue
         CEQ.SingleCEQ(each_url, "Results/BME/")
+
+bme = 'mec_urls.txt'
+with open(bme) as fp:
+    each_url = fp.readline().rstrip('\n')
+    CEQ.SingleCEQ(each_url, "Results/Mec/")
+    while each_url:
+        each_url = fp.readline().rstrip('\n')
+        if(each_url==''):
+            continue
+        CEQ.SingleCEQ(each_url, "Results/Mec/")

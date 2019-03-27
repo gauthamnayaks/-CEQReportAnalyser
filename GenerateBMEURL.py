@@ -1,15 +1,25 @@
 Courses = []
 #Enter courses of the form Course_code, termin, start_year, end_year, LP, Student_group
 
-Courses.append(["BLT015", "VT", "17", "10", "LP1", "all"])
+Courses.append(["EEMN21", "HT", "17", "16", "LP1", "all"])
 
-Courses.append(["BMEF01", "VT", "18", "16", "LP2", "all"])
+Courses.append(["EEMN05", "HT", "17", "12", "LP2", "all"])
+
+Courses.append(["ESSF10", "VT", "18", "10", "LP1", "all"])
 
 Courses.append(["BMEF05", "VT", "18", "18", "LP2", "all"])
 
 Courses.append(["BMEF10", "HT", "18", "18", "LP1", "all"])
 
+Courses.append(["EEMN10", "HT", "17", "12", "LP2", "all"])
+
 Courses.append(["BMEF15", "HT", "18", "18", "LP1", "all"])
+
+Courses.append(["EEMN01", "VT", "18", "10", "LP2", "all"])
+
+Courses.append(["EEMF15", "HT", "17", "13", "LP1", "all"])
+
+Courses.append(["EEMF05", "HT", "17", "12", "LP2", "all"])
 
 Courses.append(["BMEN01", "VT", "18", "15", "LP2", "all"])
 
@@ -17,13 +27,27 @@ Courses.append(["BMEN05", "HT", "17", "15", "LP1", "all"])
 
 Courses.append(["BMEN10", "HT", "17", "15", "LP2", "all"])
 
-Courses.append(["EDA011", "VT", "17", "09", "LP2", "all"])
+Courses.append(["EEMN15", "VT", "18", "13", "LP1", "all"])
 
-Courses.append(["EDA016", "HT", "15", "09", "LP2", "all"])
+Courses.append(["ETIF10", "VT", "18", "13", "LP2", "all"])
 
-Courses.append(["EDA017", "VT", "17", "10", "LP1", "all"])
+Courses.append(["BLT015", "VT", "17", "10", "LP1", "all"])
 
-Courses.append(["EDA031", "VT", "17", "10", "LP2", "all"])
+Courses.append(["EITA01", "HT", "17", "11", "LP2", "all"])
+
+Courses.append(["MVKF20", "VT", "18", "14", "LP1", "all"])
+
+Courses.append(["EEMN26", "VT", "18", "17", "LP2", "all"])
+
+Courses.append(["EEMF10", "HT", "17", "13", "LP2", "all"])
+
+Courses.append(["BMEN01", "VT", "18", "15", "LP2", "all"])
+
+Courses.append(["EITN60", "VT", "13", "13", "LP2", "all"])
+
+Courses.append(["EEML05", "VT", "17", "17", "LP2", "all"])
+
+Courses.append(["ETIF20", "VT", "18", "14", "LP1", "all"])
 
 
 i=0
