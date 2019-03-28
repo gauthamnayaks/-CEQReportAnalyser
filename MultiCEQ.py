@@ -19,7 +19,7 @@ except FileExistsError:
     # directory already exists
     pass
 
-regler = 'bme_urls.txt'
+regler = 'regler_urls.txt'
 with open(regler) as fp:
     each_url = fp.readline().rstrip('\n')
     CEQ.SingleCEQ(each_url, "Results/Regler/")

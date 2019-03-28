@@ -34,8 +34,6 @@ Courses.append(["MMTN30", "VT", "18", "18", "LP1", "all"])
 
 Courses.append(["MMTN35", "HT", "17", "17", "LP1", "all"])
 
-Courses.append(["MMTN20", "HT", "17", "17", "LP1", "all"])
-
 i=0
 url = [] # Store the urls
 
@@ -47,12 +45,16 @@ for course in Courses:
     LP = course[4]
     program = course[5]
 
-    for year in range(int(end_year),int(start_year)):
+    #for year in range(int(end_year),int(start_year)):
+    year = int(start_year)
+    while(True):
         if(program=="all"):
             url.append("http://www.ceq.lth.se/rapporter/20"+str("{0:0=2d}".format(year))+"_"+termin+"/"+LP+"/"+Course_code+"_20"+str("{0:0=2d}".format(year))+"_"+termin+"_"+LP+"_slutrapport_en.html")
         else:
             url.append("http://www.ceq.lth.se/rapporter/20"+str("{0:0=2d}".format(year))+"_"+termin+"/"+LP+"/"+Course_code+"_20"+str("{0:0=2d}".format(year))+"_"+termin+"_"+LP+"_"+program+"_slutrapport_en.html")
-        i+=1
+        year=year-1
+        if(year<=int(end_year)):
+            break
 
 
 with open('mec_urls.txt', 'w') as f:
